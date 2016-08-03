@@ -12,12 +12,3 @@
 @interface RHCLeaf : NSObject<Component>
 
 @end
-
-//#import "Branch.h"
-//#import "Leaf.h"
-//#import "Composite.h"
-//
-//BOOL test();
-//Branch*composititeCorpTree();
-//NSString *treeInfo(Branch *root);
-//void display(Composite *root);
