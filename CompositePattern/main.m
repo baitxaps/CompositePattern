@@ -10,18 +10,18 @@
 #import "Branch.h"
 #import "Leaf.h"
 
-static id<IBranch>composititeCorpTree() {
+static Branch*composititeCorpTree() {
     // 首先产生总经理CEO
-    id<IBranch>root = [[Branch alloc]initWithName:@"王大麻子" position:@"总经理" salary:100000];
+    Branch *root = [[Branch alloc]initWithName:@"王大麻子" position:@"总经理" salary:100000];
     
     // 把三个部门经理产生出来
-    id<IBranch>developDep = [[Branch alloc]initWithName:@"刘大瘸子" position:@"研发部门经理" salary:10000];
-    id<IBranch>salesDep = [[Branch alloc]initWithName:@"马二拐子" position:@"销售部门经理" salary:20000];
-    id<IBranch>financeDep = [[Branch alloc]initWithName:@"赵三驼子" position:@"财务部经理" salary:30000];
+    Branch *developDep = [[Branch alloc]initWithName:@"刘大瘸子" position:@"研发部门经理" salary:10000];
+    Branch *salesDep = [[Branch alloc]initWithName:@"马二拐子" position:@"销售部门经理" salary:20000];
+    Branch *financeDep = [[Branch alloc]initWithName:@"赵三驼子" position:@"财务部经理" salary:30000];
     
     // 再把三个小组长产生出来
-    id<IBranch>firstDevGroup = [[Branch alloc]initWithName:@"杨三乜斜" position:@"开发一组组长" salary:5000];
-    id<IBranch>secondDevGroup = [[Branch alloc]initWithName:@"吴大棒槌" position:@"开发二组组长" salary:6000];
+    Branch *firstDevGroup = [[Branch alloc]initWithName:@"杨三乜斜" position:@"开发一组组长" salary:5000];
+    Branch *secondDevGroup = [[Branch alloc]initWithName:@"吴大棒槌" position:@"开发二组组长" salary:6000];
     
     // 把所有的小兵都产生出来
     Leaf *a = [[Leaf alloc]initWithName:@"a" positon:@"开发人员" salary:2000];
@@ -64,14 +64,14 @@ static id<IBranch>composititeCorpTree() {
     return root;
 }
 
-static NSString *treeInfo(id<IBranch>root){
+static NSString *treeInfo(Branch *root){
     NSArray * subordinateList = [root subordinate];
     NSString *info = @"";
-    for (id<ICorp>s in subordinateList) {
+    for (Corp *s in subordinateList) {
         if ([s isKindOfClass:[Leaf class]]){
             info = [NSString stringWithFormat:@"%@%@\n",info,[s info]];
         }else {
-            info = [NSString stringWithFormat:@"%@%@\n%@",info,[s info],treeInfo((id<IBranch>)s)];
+            info = [NSString stringWithFormat:@"%@%@\n%@",info,[s info],treeInfo((Branch*)s)];
         }
     }
     return info;
@@ -79,7 +79,7 @@ static NSString *treeInfo(id<IBranch>root){
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        id<IBranch>ceo = composititeCorpTree();
+        Branch *ceo = composititeCorpTree();
         NSLog(@"%@",[ceo info]);
          NSLog(@"%@",treeInfo(ceo));
         

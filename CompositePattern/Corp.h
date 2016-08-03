@@ -9,5 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface Corp : NSObject
+- (instancetype)initWithName:(NSString *)name position:(NSString *)position
+                      salary:(NSInteger)salary;
 
+- (NSString *)info;
 @end

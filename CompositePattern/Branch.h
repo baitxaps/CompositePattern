@@ -7,9 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "IBranch.h"
+#import "Corp.h"
 
-@interface Branch : NSObject<IBranch>
+@interface Branch : Corp
 - (instancetype)initWithName:(NSString *)name position:(NSString *)position
                       salary:(NSInteger)salary;
+
+- (void)addSubordinate:(Corp *)corp;
+- (NSArray*)subordinate;
 @end

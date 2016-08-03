@@ -8,30 +8,13 @@
 
 #import "Leaf.h"
 
-@interface Leaf ()
-
-@property (nonatomic,strong)NSString *name;
-@property (nonatomic,strong)NSString *position;
-@property (nonatomic,assign)NSInteger salary;
-
-@end
-
 @implementation Leaf
 
 - (instancetype)initWithName:(NSString *)name positon:(NSString *)position salary:(NSInteger)salary {
-    if (self = [super init]) {
-        _name = name;
-        _position = position;
-        _salary = salary;
+    if (self = [super initWithName:name position:position salary:salary]) {
+
     }
     return self;
 }
-
-- (NSString *)info {
-    NSString *mg = [NSString stringWithFormat:@"姓名:%@\t职位:%@\t薪水:%ld",_name,_position,_salary];
-    
-    return mg;
-}
-
 
 @end

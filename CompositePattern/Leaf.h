@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ILeaf.h"
+#import "Corp.h"
 
-@interface Leaf : NSObject<ILeaf>
+@interface Leaf : Corp
 - (instancetype)initWithName:(NSString *)name positon:(NSString *)position salary:(NSInteger)salary;
 @end
