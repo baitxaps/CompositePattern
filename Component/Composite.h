@@ -8,12 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Component.h"
-
 // 树支构件
 @interface Composite : NSObject<Component>
-
-- (void)add:(id<Component>)componet;
-- (void)remove:(id<Component>)component;
-- (NSArray *)children ;
 
 @end

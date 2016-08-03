@@ -35,4 +35,12 @@
     return mg;
 }
 
+- (void)setTParent:(Corp *)tParent {
+    _tParent = tParent;
+}
+
+- (Corp *)parent {
+    return  _tParent;
+}
+
 @end

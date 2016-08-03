@@ -23,6 +23,7 @@
 
 // 增加一个下属，可能是小头目，也可能是个小兵
 - (void)addSubordinate:(Corp *)corp {
+    corp.tParent = self; // 设置父节点
     [self.subordinateList addObject:corp];
 }
 

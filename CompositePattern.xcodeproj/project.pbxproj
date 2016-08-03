@@ -10,6 +10,7 @@
 		77BEF82D1D518D0800A4D69C /* Corp.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BEF82C1D518D0800A4D69C /* Corp.m */; };
 		77BEF8331D5195D700A4D69C /* Composite.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BEF8321D5195D700A4D69C /* Composite.m */; };
 		77BEF8361D51976E00A4D69C /* RHCLeaf.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BEF8351D51976E00A4D69C /* RHCLeaf.m */; };
+		77BEF8481D52265700A4D69C /* CFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BEF8471D52265700A4D69C /* CFunction.m */; };
 		77D516B61D507E98006E43FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D516B51D507E98006E43FC /* main.m */; };
 		77D516C11D50E2A0006E43FC /* Leaf.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D516C01D50E2A0006E43FC /* Leaf.m */; };
 		77D516C51D50E4E5006E43FC /* Branch.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D516C41D50E4E5006E43FC /* Branch.m */; };
@@ -37,6 +38,9 @@
 		77BEF8321D5195D700A4D69C /* Composite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Composite.m; sourceTree = "<group>"; };
 		77BEF8341D51976E00A4D69C /* RHCLeaf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHCLeaf.h; sourceTree = "<group>"; };
 		77BEF8351D51976E00A4D69C /* RHCLeaf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHCLeaf.m; sourceTree = "<group>"; };
+		77BEF8371D51A23800A4D69C /* component001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = component001.png; sourceTree = "<group>"; };
+		77BEF8461D52265700A4D69C /* CFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFunction.h; sourceTree = "<group>"; };
+		77BEF8471D52265700A4D69C /* CFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFunction.m; sourceTree = "<group>"; };
 		77D516B21D507E98006E43FC /* CompositePattern */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CompositePattern; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D516B51D507E98006E43FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		77D516BD1D50E1E2006E43FC /* CompositePattern001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CompositePattern001.png; sourceTree = "<group>"; };
@@ -60,11 +64,14 @@
 		77BEF82F1D51952C00A4D69C /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				77BEF8371D51A23800A4D69C /* component001.png */,
 				77BEF8301D51954700A4D69C /* Component.h */,
 				77BEF8311D5195D700A4D69C /* Composite.h */,
 				77BEF8321D5195D700A4D69C /* Composite.m */,
 				77BEF8341D51976E00A4D69C /* RHCLeaf.h */,
 				77BEF8351D51976E00A4D69C /* RHCLeaf.m */,
+				77BEF8461D52265700A4D69C /* CFunction.h */,
+				77BEF8471D52265700A4D69C /* CFunction.m */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -161,6 +168,7 @@
 			files = (
 				77D516C51D50E4E5006E43FC /* Branch.m in Sources */,
 				77BEF82D1D518D0800A4D69C /* Corp.m in Sources */,
+				77BEF8481D52265700A4D69C /* CFunction.m in Sources */,
 				77D516B61D507E98006E43FC /* main.m in Sources */,
 				77BEF8361D51976E00A4D69C /* RHCLeaf.m in Sources */,
 				77D516C11D50E2A0006E43FC /* Leaf.m in Sources */,

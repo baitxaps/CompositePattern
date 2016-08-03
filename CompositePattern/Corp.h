@@ -9,7 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface Corp : NSObject
-- (instancetype)initWithName:(NSString *)name position:(NSString *)position
+
+@property(nonatomic,strong)Corp *tParent;
+
+- (instancetype)initWithName:(NSString *)name
+                    position:(NSString *)position
                       salary:(NSInteger)salary;
 
 - (NSString *)info;

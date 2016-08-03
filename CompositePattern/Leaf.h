@@ -10,5 +10,7 @@
 #import "Corp.h"
 
 @interface Leaf : Corp
+
 - (instancetype)initWithName:(NSString *)name positon:(NSString *)position salary:(NSInteger)salary;
+
 @end
