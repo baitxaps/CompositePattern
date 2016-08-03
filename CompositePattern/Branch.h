@@ -15,4 +15,5 @@
 
 - (void)addSubordinate:(Corp *)corp;
 - (NSArray*)subordinate;
+
 @end

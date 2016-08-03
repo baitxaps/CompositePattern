@@ -77,11 +77,39 @@ static NSString *treeInfo(Branch *root){
     return info;
 }
 
+#import "Composite.h"
+#import "RHCLeaf.h"
+
+static void display(Composite *root){
+    for (id<Component>c in [root children]) {
+        if ([c isKindOfClass:[RHCLeaf class]]) {
+            [c doSomething];
+        }else {
+            display(c);
+        }
+    }
+}
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        // 1
         Branch *ceo = composititeCorpTree();
         NSLog(@"%@",[ceo info]);
          NSLog(@"%@",treeInfo(ceo));
+        
+        //2
+        // 创建一个根节点
+        Composite *root = [Composite new];
+        [root doSomething];
+        // 创建一个树板构件
+        Composite *branch = [Composite new];
+        // 创建一个叶子节点
+        RHCLeaf *leaf = [RHCLeaf new];
+        // 建立整体
+        [root add:branch];
+        [root add :leaf];
+        
+        display(root);
         
     }
     return 0;
